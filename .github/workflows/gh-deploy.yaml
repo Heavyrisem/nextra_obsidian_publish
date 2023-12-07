@@ -1,0 +1,37 @@
+name: Page deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js and pnpm
+        uses: pnpm/setup-pnpm@v6
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+
+      - name: Build Next.js app
+        run: |
+          pnpm run build
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          touch out/.nojekyll
+          git checkout --orphan gh-pages
+          git --work-tree=out add --all
+          git --work-tree=out commit -m "GitHub Actions: Deploy to GitHub Pages"
+          git push origin HEAD:gh-pages --force
