@@ -45,12 +45,8 @@ jobs:
         run: |
           pnpm build
 
-      - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          touch out/.nojekyll
-          git checkout --orphan gh-pages
-          git --work-tree=out add --all
-          git --work-tree=out commit -m "GitHub Actions: Deploy to GitHub Pages"
-          git push origin HEAD:gh-pages --force
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./out
