@@ -2,7 +2,8 @@
 nextra-publish: true
 nextra-displayname: 문서화
 ---
-Sample Editor Command
+# 문서화
+
 ### React live ?
 chakra 개발자들도 전부 sandpack로 통일시키려 했는데 디자인이나, 로딩 이슈 같은게 있어서  
   
