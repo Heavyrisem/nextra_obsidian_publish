@@ -10,6 +10,7 @@ const config: DocsThemeConfig = {
         alignItems: "center",
         justifyItems: "center",
         gap: "1rem",
+        fontWeight: "bold",
       }}
     >
       <Image
