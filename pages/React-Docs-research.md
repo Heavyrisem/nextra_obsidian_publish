@@ -27,9 +27,3 @@ https://github.com/chakra-ui/chakra-ui-docs/pull/791
         ds.estsecurity.com/docs/2.1.1/components/button
 - 사용되는 언어 표시 UI
 ![Pasted image 20230921145203.png](/Pasted_image_20230921145203.png)
-
-
-
-
-
-중간 피드백 이후에 프레젠테이션의 방향성을 잘 찾았고, 내용도 주제에 더 잘 맞추어 집중할 수 있었던것 같다.
