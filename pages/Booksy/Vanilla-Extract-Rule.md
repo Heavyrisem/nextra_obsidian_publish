@@ -3,7 +3,7 @@ nextra-publish: true
 nextra-displayname: Vanilla Extract 규칙
 ---
 
-
+# Vanilla Extract Rule
 
 1. ui-core 패키지에서는 최대한 Box 컴포넌트 사용 X
     1. Box 컴포넌트로 해결 불가능한 상황이 있을 수 있음
